@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Card from "./components/Card"
+import { Navbar } from "./components/Navbar"
 
 
 function App() {
@@ -23,16 +24,17 @@ function App() {
 
     <>
       {/* <Card /> */}
+      <Navbar />
       {
         user.map((data, idx) => 
           <>
-            <Card key = {idx} title={data.title} description={data.description} />
+            <Card key = {idx} titleName={data.title} descriptionName={data.description} urlName={data.urlToImage} url={data.url} />
             {/* <li></li> */}
           </>
           
         )
       }
-
+      
 
       
 
